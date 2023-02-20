@@ -87,6 +87,8 @@ After running the script, run a search for the term "TODO-SCAFFOLD" to search fo
 
 ### Troubleshooting
 
+- The script ends in an exception
+    - Please make sure you are running the script from this directory directly, i.e. calling `python3 ./scaffolding.py`
 - `sql-default.properties` or `pom.xml` were not modified
     - To modify existing files, this script uses a simple string replace opertation. This can lead to problems, if the existing files don't follow a specific pattern. In particular, the second `<dependencies>` block in the `pom.xml` file must end with `</dependencies>` followed by at least one empty line with no symbols or other whitespace. Similarly, `sql-default.properties` must contain the comment line `# Default Properties`, with one empty line before it.
 - My DBMS or JDBC does not support default schemas
