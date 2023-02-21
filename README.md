@@ -1,6 +1,10 @@
-This repository contains a tool for the automatic generation of a baseline implementation of new dialect support for ontop, as explained on [the ontop website](https://ontop-vkg.org/dev/db-adapter.html)
+This repository contains a tool for the automatic generation of a baseline implementation of new dialect support for ontop, as explained on [the ontop website](https://ontop-vkg.org/dev/db-adapter.html). It can be run with python using
 
-Running this script starts a series of input requests to specify some key terms that need to be provided for the generation of the code:
+```bash
+python3 ./scaffolding.py
+```
+
+After running this script, the user is requested to fill out some key terms that need to be provided for the generation of the code:
 
 - *New SQL dialect name*: The name of the SQL dialect, preferably in pascal casing (e.g. `MySQL`)
 - *JDBC Driver class name*: The class name of the JDBC Driver (e.g. `com.mysql.cj.jdbc.Driver`)
