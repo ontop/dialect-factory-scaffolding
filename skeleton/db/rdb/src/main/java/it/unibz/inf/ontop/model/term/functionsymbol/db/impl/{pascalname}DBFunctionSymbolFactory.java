@@ -126,7 +126,7 @@ public class {pascalname}DBFunctionSymbolFactory extends AbstractSQLDBFunctionSy
     // TODO-SCAFFOLD: Modify this default implementation, if necessary
     @Override
     protected DBConcatFunctionSymbol createRegularDBConcat(int arity) {
-        return createNullRejectingDBConcat(arity);
+        return new NullToleratingDBConcatFunctionSymbol("CONCAT", arity, dbStringType, abstractRootDBType, false);
     }
 
     // TODO-SCAFFOLD: Implement DateTimeNorm serialization in ISO 8601 Format 'YYYY-MM-DDTHH:MM:SS+HH:MM'
